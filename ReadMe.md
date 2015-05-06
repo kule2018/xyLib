@@ -21,13 +21,30 @@
 
 
 
+# **2015-5-6 var 1.0**
+- 新增
+    - 大量字符串常用函数
+
+- 移除
+    - 移除了X(),以及对应的DOM操作, 用JQuery代替
+
+
+
+------------------------------------------
+
+
+
+
+
+
+
+
 ## 使用须知
  1. [] 中的参数为可选参数
  2. 此文件加载需要在body闭合标签前,而不要放在head中,因为那个时候window.document.body还未生成
  3. 更新日期: 2015-4-14
  4. 版本 0.351
- 
-<i class="icon-weibo"></i>
+
 
 
 ## API
@@ -162,9 +179,42 @@
 
  > utf8解码
  
- 
- 
- 
+19. **isValidPost(str)** 
+
+ > 判断是否邮政编码
+
+20. **isValidReg(chars)** 
+
+ > 判断是否危险字符
+
+21. **uncamelize(s)**
+
+ > 将CSS属性名由驼峰式转为普通式
+
+22. **camelize(string)**
+
+ > 返回一个字符串的驼峰书写形式
+
+23. **repeat(target, n, sep)**
+
+ > 根据给定的格式字符串与指定的重复次数返回一个新的格式字符串，n：一共重复几次，sep(可选)：重复字符串连接方式，默认“”;返回string
+
+24. **repeatS(target, n)** 
+
+ > (高效2分法) 根据给定的格式字符串与指定的重复次数返回一个新的格式字符串，n：一共重复几次，;返回string
+
+25. **byteLen(string, fix)**
+
+ > 获取一个字符串的字节长度，string指定字符串，fix(可选)规定一个中文字符占几个字节，默认2个
+
+26. **ellipsis(string, len, escripe)** 
+
+ > 对大于指定长度的字符串，进行裁剪，增加省略号('...')的显示; string指定字符串，len总长度，默认30，escripe(可选)指定增加的符号默认“...”：
+
+27. **pad(string, len, fill, direct)** 
+
+ > string 指定字符串，len 填充后总长度（若小于给定字符串长度则不填充），fill(可选) 规定填充字符 默认"0"， direct(可选)规定填充方向 默认右侧填充 值："PAD_LEFT" "PAD_RIGHT"
+
  
 <i id='JSON'></i> 
 ### JSON函数  (集成与 JSON 对象)
@@ -307,7 +357,3 @@
  
  
  
- 
- 
- 
- <div style="width:100px; height:100px; background-color:red; position: fixed; right:10%; top: 10%;"></div>
