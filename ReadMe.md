@@ -14,7 +14,7 @@
     - [Ajax函数](#Ajax "跳转到Ajax函数API") 
     - [JQuery函数](#JQuery "跳转到JQuery扩展函数API") 
     - [DOM 函数](#DOM "跳转到DOM函数API")
-
+    - [数组函数](#Array "跳转到数组函数API")
 
 
 ---------------------------------------
@@ -28,7 +28,9 @@
 - 移除
     - 移除了X(),以及对应的DOM操作, 用JQuery代替
 
-
+# **2015-5-7 var 1.1**
+- 新增
+    - slideMenu()滑动定位函数
 
 ------------------------------------------
 
@@ -97,6 +99,16 @@
 16. **isMobileUserAgent()**  
 
  > 是否为移动设备
+
+17. **debounce(func, wait)**
+
+ > 节流函数, 使频繁调用的函数节流
+
+18. **objNameToArr(obj)**
+
+ > 将obj的属性放置到数组
+
+
 
 
 
@@ -311,7 +323,9 @@
 
  > 返回页面顶部
  
- 
+3. **JQuery.slideMenu(options)**
+
+ > 滑动定位功能
  
  
  
@@ -343,16 +357,25 @@
 
  > 获取页面纵向滑动条滑动了多少
  
+7. **hookScroll(callBack)**
+ > 挂接鼠标滚轮事件. 回调函数的参数为正数则代表向下滚动
+
+
  
  
  
+<i id='Array'></i>
+### 数组操作 (集成与 window.xy 对象)
  
+1. **insertionSort(array)**
+
+  > 插入排序
  
- 
- 
- 
- 
- 
+2. **insertionSort(array)**
+
+  > 二分插入排序
+
+
  
  
  

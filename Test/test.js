@@ -35,6 +35,12 @@ test('工具函数:',function(){
 	xy.extend(ClassB, ClassA);
 	var cb = new ClassB();
 
+
+
+
+
+
+
 	ok(cb['Age'] === 21 && cb['Name'] === 'XueYou' && cb.getName() === 'XueYou', 'extend ok');
 
 
@@ -50,7 +56,6 @@ test('工具函数:',function(){
 test('字符串函数:', function(){
 
 	ok(xy.trim(' 1 5 6 ') === '1 5 6', 'trim ok');
-
 	ok(xy.check_range(' Xue You ', 6, 12), 'check_range ok');
 	ok(xy.isEmail('chenlovekiss@126.com'), 'isEmail ok');
 	ok(xy.isInteger(12), 'isInteger ok');
@@ -103,7 +108,23 @@ test('本地存储:', function(){
 });
 
 
+
+test('数组函数:', function(){
+
+	var arr = [2,5,9,14,73,4,326];
+
+	deepEqual(xy.insertionSort(arr), [2,4,5,9,14,73,326], 'insertionSort ok');
+
+	deepEqual(xy.binaryInsertionSort(arr), [2,4,5,9,14,73,326], 'insertionSort ok');
+
+
+});
+
+
+
 module('JSON');
+
+
 test('加密/解密', function(){
 
 	var obj = {'Name':'XueYou', 'Age':21, 'arr': [1,2, {'3':'is 3'}]};
@@ -113,4 +134,16 @@ test('加密/解密', function(){
 });
 
 
-$('#tt').backTop();
+
+
+
+
+
+
+
+
+
+
+
+
+
